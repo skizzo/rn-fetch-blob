@@ -161,11 +161,13 @@ typedef NS_ENUM(NSUInteger, ResponseFormat) {
     [self.task resume];
     
     // network status indicator
+    /*
     if ([[options objectForKey:CONFIG_INDICATOR] boolValue]) {
         dispatch_async(dispatch_get_main_queue(), ^{
             [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
         });
     }
+    */
 }
 
 ////////////////////////////////////////
@@ -368,10 +370,11 @@ typedef NS_ENUM(NSUInteger, ResponseFormat) {
     NSString * errMsg;
     NSString * respStr;
     NSString * rnfbRespType;
-    
+    /*
     dispatch_async(dispatch_get_main_queue(), ^{
         [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     });
+    */
     
     if (error) {
         if (error.domain == NSURLErrorDomain && error.code == NSURLErrorCancelled) {
